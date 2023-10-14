@@ -47,8 +47,6 @@ h1{
     border: 1px solid #ccc;
 }
 
-/* Grid Item */
-
 .item{
     margin: 5px;
     background: tomato;
@@ -56,57 +54,50 @@ h1{
     font-size: 1.5em;
 }
 
-/* Grid */
-
 .grid{
     display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px 100px;
 }
 
-.grid-1{
-    grid: 100px / 1fr 1fr;
+/* Justify Content */
+
+.start{
+    justify-content: start;
 }
 
-.grid-2{
-    grid: 100px / auto-flow 100px 50px ;
+.end{
+    justify-content: end;
 }
 
-.grid-3{
-    grid: 
-    "logo nav nav" 50px
-    "sidenav content advert" 150px
-    "sidenav footer footer" 100px
-    / 100px 1fr 50px;
+.stretch{
+    grid-template-columns: auto;
+    justify-content: stretch;
 }
 
-/* Grid Area */
-
-.logo{
-    grid-area: logo;
+.space-around{
+    justify-content: space-around;
 }
 
-.nav{
-    grid-area: nav;
+.space-between{
+    justify-content: space-between;
 }
 
-.sidenav{
-    grid-area: sidenav;
+.space-evenly{
+    justify-content: space-evenly;
 }
 
-.content{
-    grid-area: content;
+.center{
+    justify-content: center;
 }
 
-.advert{
-    grid-area: advert;
+.item-2, .item-3{
+    grid-row: span 2;
 }
 
-.footer{
-    grid-area: footer;
+.item-5{
+    grid-column: span 2;
 }
-
-
-
-
 
 
 
