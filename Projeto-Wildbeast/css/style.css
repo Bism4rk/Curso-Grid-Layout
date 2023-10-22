@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-*{
+body, p, h1, ul, li, blockquote{
     padding: 0px;
-    margin: 0px;
-}
+    margin: 0px
+  }
 
 body{
-    font-family: 'Vollkorn', serif;
+    font-family: 'Vollkorn', Georgia, serif;
 }
 
 li{
@@ -35,6 +35,8 @@ img{
     "footer footer footer";
 }
 
+/* Header */
+
 .header{
     grid-area: header;
     background: linear-gradient(135deg, #8844ee, #b07dfb);
@@ -42,6 +44,10 @@ img{
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+}
+
+.logo{
+    max-width: 200px;
 }
 
 .header nav ul{
@@ -67,9 +73,6 @@ img{
     margin-left: 30px;
 }
 
-.logo{
-    max-width: 200px;
-}
 
 /* Sidenav */
 
@@ -98,6 +101,25 @@ img{
 
 .content{
     grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.col-wide{
+    grid-column: 1 / -1;
+}
+
+.imagem-1{
+    grid-row: span 2;
+    align-self: end;
+}
+
+.imagem-2{
+    align-self: end;
 }
 
 /* Anúncios */
